@@ -1,0 +1,13 @@
+"vetor" é a segmentação de uma variavel 
+(uma matriz unidimencional)
+em pyton nao precisa de declarar esse vetor, ou contrario de outrss linguaguens
+
+
+esses vetores são itilizados fara facilitar e incurtar os códigos, 
+também permitindo modificaçoes com poucas mudanças
+
+variavel "local" so pode ser usada dentro do mesmo
+
+variavel "global" pode ser usanda em qualquer parte do programa
+
+estudar procedimentos e função!! 
