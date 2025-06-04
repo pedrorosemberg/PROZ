@@ -42,3 +42,8 @@ try:
             mes = "NOVEMBRO"
         case 12:
             mes = "DEZEMBRO"
+
+except ValueError:
+    mes = "ENTRADA INVÁLIDA. Digite um número inteiro."
+
+print("O mês selecionado é: ", mes)
