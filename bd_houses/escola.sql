@@ -25,3 +25,38 @@ INSERT INTO alunos VALUES (
     '2025-06-16',
     7.0
 );
+
+INSERT INTO alunos VALUES (
+	NULL,
+    'Pedro Almobolívar',
+    'Rua Kanindê, 157',
+    '3',
+    'Fernando Sabiá',
+    'Lógica de Programação',
+    '2025-06-16',
+    9.9
+);
+
+INSERT INTO alunos VALUES (
+	NULL,
+    'Suzana von Bismark',
+    'Avenida das Oliveiras, 187',
+    '3',
+    'Fernando Sabiá',
+    'Lógica de Programação',
+    '2025-06-16',
+    8.9
+);
+
+INSERT INTO alunos VALUES (
+	NULL,
+    'Cleiton de Faria',
+    'Alameda das Flores Bonitas, 34',
+    '3',
+    'Fernando Sabiá',
+    'Lógica de Programação',
+    '2025-06-16',
+    5.7
+);
+
+SELECT * FROM alunos;
