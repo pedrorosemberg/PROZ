@@ -1,20 +1,43 @@
-create database cadastro 
-default character set utf8mb4 
-collate utf8mb4_general_ci;
+-- Criar o banco de dados
+CREATE DATABASE cadastro
+DEFAULT CHARACTER SET utf8mb4
+COLLATE utf8mb4_general_ci;
 
-use maisum;
+-- Usar o banco de dados correto
+USE cadastro;
 
+-- Criar a tabela pessoas
+CREATE TABLE pessoas (
+	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	nome VARCHAR(30) NOT NULL,
+	nascimento DATE,
+	sexo ENUM('m', 'f'),
+	peso DECIMAL(5,2),
+	altura DECIMAL(3,2),
+	nacionalidade VARCHAR(20)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- Verificar os bancos disponíveis
+SHOW DATABASES;
 
-create table pessoas(
-	id int primary key not null auto_increment,
-	nome varchar(30) not null ,
-	nascimento date,
-	sexo enum('m', 'f'),
-	peso decimal(5,2),
-	altura decimal (3,2),
-	nacionalidade varchar(20)
-	)engine=InnoDB default charset=utf8mb4;
-    
-    show databases
+-- Inserir dados na tabela pessoas
+INSERT INTO pessoas VALUES
+(DEFAULT, 'Ana', '1975-12-22', 'f', 52.3, 1.45, 'EUA'),
+(DEFAULT, 'Maria', '1999-05-30', 'f', 75.8, 1.70, 'Portugal'),
+(DEFAULT, 'Pedro', '2000-07-15', 'm', 52.3, 1.45, 'Brasil');
 
+-- Adicionar coluna 'profissao'
+ALTER TABLE pessoas
+ADD COLUMN profissao VARCHAR(10);
+
+-- Ver a descrição da tabela
+DESC pessoas;
+
+-- Adicionar coluna 'genero' após a coluna 'nascimento'
+ALTER TABLE pessoas
+ADD COLUMN genero VARCHAR(1) NOT NULL
+AFTER nascimento;
+
+-- Adicionar coluna 'codigo' como primeira coluna
+ALTER TABLE pessoas
+ADD COLUMN codigo INT FIRST;
