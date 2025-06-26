@@ -41,3 +41,9 @@ AFTER nascimento;
 -- Adicionar coluna 'codigo' como primeira coluna
 ALTER TABLE pessoas
 ADD COLUMN codigo INT FIRST;
+
+-- Verificar os cadastros inseridos
+SELECT * FROM pessoas;
+
+-- Deleta a tabela | Código comentado
+-- DROP TABLE cadastro
