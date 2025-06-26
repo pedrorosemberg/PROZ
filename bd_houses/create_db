@@ -51,9 +51,10 @@ WHERE id = '3';
 SELECT * FROM pessoas;
 
 -- Deleta a tabela | Código comentado
--- DROP TABLE cadastro
-ALTER TABLE pessoas
-DROP COLUMN codigo;
+
+-- ALTER TABLE pessoas
+-- DROP COLUMN codigo;
+-- DROP TABLE cadastro;
 
 -- Adiciona novos dados com as informações das novas colunas inseridas
 INSERT INTO pessoas VALUES
@@ -61,3 +62,5 @@ INSERT INTO pessoas VALUES
 (DEFAULT, DEFAULT, 'Maria', '1999-05-30', 'f', 'f', 75.8, 1.70, 'Guatemala', 'Doméstica'),
 (DEFAULT, DEFAULT, 'Pedro', '2000-07-15', 'm', 'm', 52.3, 1.45, 'Alemanha', 'Policial'),
 (DEFAULT, DEFAULT, 'Carlos', '1999-09-14', 'm', 'm', 98.9,1.97, 'Croácia', 'Empresário');
+
+drop database cadastro
