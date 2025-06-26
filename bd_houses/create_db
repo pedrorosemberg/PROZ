@@ -42,11 +42,18 @@ AFTER nascimento;
 ALTER TABLE pessoas
 ADD COLUMN codigo INT FIRST;
 
+-- Inserir dados
+UPDATE pessoas
+SET genero = 'm', profissao = 'Professor'
+WHERE id = '3';
+
 -- Verificar os cadastros inseridos
 SELECT * FROM pessoas;
 
 -- Deleta a tabela | Código comentado
 -- DROP TABLE cadastro
+ALTER TABLE pessoas
+DROP COLUMN codigo;
 
 -- Adiciona novos dados com as informações das novas colunas inseridas
 INSERT INTO pessoas VALUES
